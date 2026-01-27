@@ -3,79 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Proklamasi Kemerdekaan Indonesia - 17 Agustus 1945</title>
+  <title>17 Agustus 1945 - Proklamasi Kemerdekaan Indonesia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="bg-pattern"></div>
+
   <header>
-    <h1>Proklamasi Kemerdekaan Republik Indonesia</h1>
-    <p>17 Agustus 1945 • Jl. Pegangsaan Timur No. 56, Jakarta</p>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Proklamasi Kemerdekaan</h1>
+      <p class="subtitle">17 Agustus 1945 — Indonesia Merdeka</p>
+    </div>
   </header>
 
-  <main>
-    <section class="content">
+  <main class="container">
+    <div class="card">
       <h2>Latar Belakang Peristiwa</h2>
       <p>
-        Setelah Jepang menyerah kepada Sekutu pada tanggal 15 Agustus 1945, golongan muda di Indonesia mendesak 
-        Soekarno dan Mohammad Hatta untuk segera memproklamasikan kemerdekaan tanpa menunggu persetujuan Jepang.
+        Pasca penyerahan Jepang kepada Sekutu tanggal 15 Agustus 1945, tekanan dari golongan muda semakin kuat agar kemerdekaan segera diproklamasikan.
       </p>
       <p>
-        Pada malam tanggal 16 Agustus 1945, golongan muda menculik Soekarno dan Hatta ke Rengasdengklok (Karawang). 
-        Setelah negosiasi, disepakati bahwa proklamasi akan dilakukan keesokan harinya di Jakarta.
+        Malam 16 Agustus 1945, Soekarno dan Mohammad Hatta dibawa ke Rengasdengklok oleh golongan muda. Setelah diskusi panjang, diputuskan proklamasi akan dilaksanakan esok pagi di Jakarta.
       </p>
-    </section>
+    </div>
 
-    <section class="video-section">
-      <h2>Rekaman / Video Dokumentasi</h2>
-      <p>Tempat untuk menaruh video (embed YouTube atau video lokal):</p>
-
-      <!-- === TEMPAT VIDEO === -->
-      <!-- Ganti src dengan link embed YouTube yang kamu inginkan, contoh: -->
-      <div class="video-wrapper">
+    <div class="card video-card">
+      <h2>Dokumentasi Video</h2>
+      <p>Klik tombol di bawah untuk menonton rekaman bersejarah atau penjelasan proklamasi:</p>
+      
+      <!-- Tempat video – awalnya disembunyikan -->
+      <div class="video-wrapper" id="videoWrapper">
         <iframe 
-          src="https://www.youtube.com/embed/GbB40M7VGy0?rel=0" 
-          title="Rekaman Pembacaan Teks Proklamasi Kemerdekaan Indonesia" 
+          id="videoIframe"
+          src="" 
+          title="Rekaman Proklamasi Kemerdekaan" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
       </div>
 
-      <!-- Alternatif: video lokal (upload file mp4 ke folder yang sama) -->
-      <!--
-      <video controls poster="thumbnail.jpg">
-        <source src="proklamasi.mp4" type="video/mp4">
-        Browser Anda tidak mendukung tag video.
-      </video>
-      -->
-    </section>
+      <!-- Tombol play (ganti VIDEO_ID sesuai keinginan) -->
+      <button class="play-btn" onclick="playVideo('https://www.youtube.com/embed/0xaTIQt6rTI?rel=0&autoplay=1')">
+        Putar Video Bersejarah
+      </button>
+    </div>
 
-    <section class="content">
-      <h2>Isi Teks Proklamasi</h2>
-      <div class="proklamasi-text">
-        <p><strong>PROKLAMASI</strong></p>
-        <p>Kami bangsa Indonesia dengan ini menjatakan kemerdekaan Indonesia.</p>
-        <p>Hal-hal jang mengenai pemindahan kekoeasaan d.l.l., diselenggarakan dengan tjara saksama dan dalam tempo jang sesingkat-singkatnja.</p>
-        <p>Djakarta, hari 17 boelan 8 tahoen 05</p>
-        <p>Atas nama bangsa Indonesia,</p>
-        <p class="ttd">Soekarno / Hatta</p>
+    <div class="card proclamation-card">
+      <h2>Teks Proklamasi Asli</h2>
+      <div class="proklamasi">
+        <div class="proklamasi-content">
+          <p class="proklamasi-title">PROKLAMASI</p>
+          <p>Kami bangsa Indonesia dengan ini menjatakan kemerdekaan Indonesia.</p>
+          <p>Hal-hal jang mengenai pemindahan kekoeasaan d.l.l., diselenggarakan dengan tjara saksama dan dalam tempo jang sesingkat-singkatnja.</p>
+          <p class="date">Djakarta, hari 17 boelan 8 tahoen 05</p>
+          <p class="sign">Atas nama bangsa Indonesia</p>
+          <p class="ttd">Soekarno / Hatta</p>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <section class="content">
-      <h2>Tokoh Penting</h2>
-      <ul>
-        <li><strong>Ir. Soekarno</strong> – Pembaca teks proklamasi</li>
-        <li><strong>Mohammad Hatta</strong> – Wakil proklamator</li>
-        <li><strong>Sayed Tanveer</strong> – Pengetik naskah proklamasi</li>
-        <li><strong>Wikana, Chaerul Saleh, Sutan Sjahrir</strong> – Golongan muda penggerak Rengasdengklok</li>
-      </ul>
-    </section>
+    <div class="card">
+      <h2>Tokoh-tokoh Penting</h2>
+      <div class="tokoh-grid">
+        <div class="tokoh-item"><strong>Ir. Soekarno</strong><br>Pembaca Teks Proklamasi</div>
+        <div class="tokoh-item"><strong>Mohammad Hatta</strong><br>Wakil Proklamator</div>
+        <div class="tokoh-item"><strong>Sayed Tanveer</strong><br>Pengetik Naskah</div>
+        <div class="tokoh-item"><strong>Golongan Muda</strong><br>Wikana, Chaerul Saleh, Sutan Sjahrir, dll.</div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>© 2026 • Edukasi Sejarah Kemerdekaan Indonesia • Dibuat oleh Chomecx78</p>
+    <p>Edukasi Sejarah • 17 Agustus 1945 • Merdeka atau Mati</p>
   </footer>
 
   <script src="script.js"></script>
