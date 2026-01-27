@@ -1,1 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f0f0f0;
+  background: #0f0f1a;
+  line-height: 1.7;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1600&q=80') center/cover;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+}
+
+.date {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+blockquote {
+  font-size: 1.6rem;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+.section {
+  padding: 5rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #ffd700;
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background: #c8102e;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro, .tokoh {
+  background: rgba(20, 20, 35, 0.85);
+}
+
+.video-section {
+  background: linear-gradient(to bottom, #1a1a2e, #0f0f1a);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  border: 2px solid #c8102e;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-proklamasi .proklamasi-box {
+  background: rgba(30, 30, 50, 0.9);
+  border: 2px solid #b91c1c;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(185, 28, 28, 0.3);
+  font-size: 1.35rem;
+  line-height: 2.1;
+}
+
+.proklamasi-box .title {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+}
+
+.signature {
+  margin-top: 2.5rem;
+  font-weight: 600;
+  color: #ffd700;
+  font-size: 1.6rem;
+}
+
+.tokoh ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.tokoh li {
+  margin: 1.2rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.tokoh li::before {
+  content: "★";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+}
+
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 3.8rem; }
+  h2 { font-size: 2.2rem; }
+  .proklamasi-box { padding: 2rem; font-size: 1.15rem; }
+}
