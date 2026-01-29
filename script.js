@@ -1,9 +1,5 @@
-// Script sederhana (bisa dikembangkan nanti)
-
+// Saat ini hanya animasi sederhana saat scroll
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Website Proklamasi Kemerdekaan sudah dimuat!");
-
-  // Contoh: efek fade-in pada konten saat scroll (opsional)
   const sections = document.querySelectorAll("section");
 
   const observer = new IntersectionObserver((entries) => {
@@ -12,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.add("fade-in");
       }
     });
-  }, { threshold: 0.1 });
+  }, {
+    threshold: 0.1
+  });
 
   sections.forEach(section => {
     observer.observe(section);
