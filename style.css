@@ -5,117 +5,110 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #f8f1e9;
-  color: #2d2d2d;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;          /* BACKGROUND UTAMA: PUTIH */
+  color: #000000;                     /* teks default hitam */
+  line-height: 1.5;
 }
 
 header {
-  background: linear-gradient(to right, #b22222, #cd3232);
-  color: white;
+  background-color: #b22222;          /* merah header tetap */
+  color: #ffffff;                     /* teks di header putih */
   text-align: center;
   padding: 2.5rem 1rem;
 }
 
 header h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
 }
 
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
 }
 
 .hero {
-  background: url('https://images.unsplash.com/photo-1621161701910-904d9b999e30?w=1200') center/cover no-repeat;
-  height: 60vh;
-  min-height: 400px;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: #ffffff;                /* BACKGROUND KUTIPAN: PUTIH */
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
-.hero-text {
-  position: relative;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
+.quote {
   max-width: 900px;
 }
 
-.hero h2 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  color: #000000;                     /* kutipan hitam */
 }
 
 .quote-author {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: italic;
+  color: #444444;                     /* author abu gelap */
 }
 
 .content {
   max-width: 900px;
-  margin: 3rem auto;
+  margin: 2.5rem auto;
   padding: 0 1.5rem;
+  background: #ffffff;                /* konten putih */
 }
 
-h2 {
+h3 {
   color: #b22222;
+  font-size: 1.8rem;
   margin: 2rem 0 1rem;
-  border-bottom: 3px solid #cdcdcd;
-  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #dddddd;
+  padding-bottom: 0.5rem;
 }
 
-.proklamasi-text {
-  background: #fffef7;
-  border: 2px solid #b22222;
-  padding: 2.5rem;
-  margin: 2rem 0;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.35rem;
-  line-height: 2.1;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+p {
+  color: #222222;                     /* paragraf hitam pekat */
 }
 
 .video-container {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
   text-align: center;
 }
 
-.video-container iframe,
-.video-container video {
+.video-container iframe {
   width: 100%;
   max-width: 860px;
   height: 480px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
 }
 
-.footer-info {
+footer {
   text-align: center;
-  padding: 2.5rem 1rem;
-  background: #e8e8e8;
-  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background: #f8f8f8;                /* footer abu sangat terang */
+  color: #555555;
   font-size: 0.95rem;
-  color: #555;
+  margin-top: 3rem;
 }
 
-/* responsif */
+/* Responsif untuk mobile */
 @media (max-width: 768px) {
-  .hero h2 { font-size: 1.9rem; }
-  header h1 { font-size: 2.1rem; }
-  .video-container iframe,
-  .video-container video { height: 280px; }
+  header h1 { font-size: 2.6rem; }
+  header h2 { font-size: 2rem; }
+  .quote-text { font-size: 2.1rem; }
+  .video-container iframe { height: 240px; }
 }
